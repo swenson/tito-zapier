@@ -10,7 +10,7 @@ Modify `hook.py` to add your zapier incoming webhook, and upload this code to AW
 If you want to use Google Sheets, you can use the following header row:
 
 ```
-title	url	name	email	payment email	currency	total cost	ticket discount code	ticket quantity	ticket cost
+title	url	name	email	payment email	currency	total cost	ticket discount code	ticket type ticket quantity	ticket cost
 ```
 
 ## License

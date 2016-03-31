@@ -15,6 +15,7 @@ def lambda_handler(event, context):
     email = event["email"]
     currency = reg["currency"]
     total_cost = reg["total"]
+    ticket_type = reg["release_title"]
     ticket_discount_code = event["discount_code_used"]
     ticket_quantity = sum(r["quantity"] for r in reg["receipt"]["receipt_lines"])
     ticket_cost = event["price"]
@@ -30,7 +31,8 @@ def lambda_handler(event, context):
       total_cost=total_cost,
       ticket_discount_code=ticket_discount_code,
       ticket_quantity=ticket_quantity,
-      ticket_cost=ticket_cost)
+      ticket_cost=ticket_cost,
+      ticket_type=ticket_type)
 
     data = urllib.urlencode(body)
 
